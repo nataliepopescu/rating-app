@@ -1,10 +1,18 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="hello-vue" class="demo">
+    {{ message }}
   </div>
-  <router-view />
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      message: "Hello World!",
+    };
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -13,6 +21,17 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.demo {
+  font-family: sans-serif;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  padding: 20px 30px;
+  margin-top: 1em;
+  margin-bottom: 40px;
+  user-select: none;
+  overflow-x: auto;
 }
 
 #nav {
